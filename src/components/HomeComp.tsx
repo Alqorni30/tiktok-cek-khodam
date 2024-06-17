@@ -17,7 +17,11 @@ const HomeComp: React.FC = () => {
     "Cicak Putus Ekor",
     "Keris Bengkok", 
     "Paus buncit",
-    "Harimau terbang"
+    "Harimau terbang",
+    "Genduruwo",
+    "Nyi Roro Kidul",
+    "Dede inoen",
+    "Serigala terakhir"
   ];
 
   const getRandomKhodam = () => {
