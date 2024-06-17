@@ -15,13 +15,13 @@ const HomeComp: React.FC = () => {
     "Kucing Hutan",
     "Kambing Asmodius",
     "Cicak Putus Ekor",
-    "Keris Bengkok", 
+    "Keris Bengkok",
     "Paus buncit",
     "Harimau terbang",
     "Genduruwo",
     "Nyi Roro Kidul",
     "Dede inoen",
-    "Serigala terakhir"
+    "Serigala terakhir",
   ];
 
   const getRandomKhodam = () => {
@@ -31,8 +31,15 @@ const HomeComp: React.FC = () => {
 
   const checkKhodam = (event: FormEvent) => {
     event.preventDefault();
+
     if (nama.trim() !== "") {
-      const khodam = getRandomKhodam();
+      const khodam =
+        nama.toLowerCase() === "hervinsa" ||
+        nama.toLowerCase() === "alqorni" ||
+        nama.toLowerCase() === "bayo" ||
+        nama.toLowerCase() === "vinsa"
+          ? "King Babayo"
+          : getRandomKhodam(); // Assign King Babayo for specific names
       setMessage(
         `Nama: ${nama.toUpperCase()}, Khodam: ${khodam.toUpperCase()}`
       );
@@ -50,7 +57,9 @@ const HomeComp: React.FC = () => {
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="border rounded-lg bg-amber-500 border-teal-600 px-5 py-10">
         <div className="mb-6 text-center">
-          <h1 className="text-3xl font-bold ">Cek Khodam Gratis</h1>
+          <h1 className="md:text-3xl text-2xl font-bold ">
+            Cek Khodam Online Gratis
+          </h1>
           <p className="text-sm italic">*Bercanda gaes</p>
         </div>
 
